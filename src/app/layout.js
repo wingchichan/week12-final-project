@@ -28,7 +28,7 @@ export const metadata = {
 const Layout = ({ children }) => {
   return (
     <ClerkProvider>
-      <html lang="en" className={${geistSans.variable} ${geistMono.variable}}>
+      <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
         <body className="antialiased">
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <SignedOut>
