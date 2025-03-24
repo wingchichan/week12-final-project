@@ -1,15 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function WeatherWidget() {
   const [location, setLocation] = useState("");
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
 
-  const fetchWeather = async () => {
+  const API_KEY = "8622541f9a9f43b1a5b143446252403"; // ваш API ключ
+
+  const fetchWeather = async (query) => {
     try {
       const response = await fetch(
-        `https://api.weatherapi.com/v1/current.json?key=8622541f9a9f43b1a5b143446252403&q=${location}`
+        `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${query}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch weather data");
@@ -19,6 +21,7 @@ export default function WeatherWidget() {
         temperature: data.current.temp_c,
         description: data.current.condition.text,
         location: data.location.name,
+        icon: data.current.condition.icon, // добавляем иконку погоды
       });
       setError(null);
     } catch (err) {
@@ -27,13 +30,36 @@ export default function WeatherWidget() {
     }
   };
 
+  // Функция для получения текущего местоположения
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          fetchWeather(`${latitude},${longitude}`); // передаем координаты в запрос
+        },
+        (error) => {
+          setError("Error fetching location: " + error.message);
+        }
+      );
+    } else {
+      setError("Geolocation is not supported by this browser.");
+    }
+  };
+
+  // Вызов getLocation при монтировании компонента
+  useEffect(() => {
+    getLocation();
+  }, []);
+
   const handleChange = (event) => {
     setLocation(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetchWeather();
+    fetchWeather(location); // Погода по городу, если указано место
   };
 
   return (
@@ -50,9 +76,17 @@ export default function WeatherWidget() {
       </form>
       {error && <p>{error}</p>}
       {weather && (
-        <p>
-          {weather.location}: {weather.temperature}°C, {weather.description}
-        </p>
+        <div>
+          <p>
+            {weather.location}: {weather.temperature}°C, {weather.description}
+          </p>
+          {weather.icon && (
+            <img
+              src={`https:${weather.icon}`} // Иконка погоды
+              alt={weather.description}
+            />
+          )}
+        </div>
       )}
     </div>
   );

@@ -3,15 +3,16 @@ import Calendar from '../components/Calendar';
 import WeatherWidget from "../components/WeatherWidget";
 
 
-const Page1 = () => {
+const MyCalendar = () => {
   return (
     <div>
-        <WeatherWidget />
-      <h1>My calendar</h1>
+        
+      <h1>My Calendar</h1>
+      <WeatherWidget />
       <Calendar />
 
     </div>
   );
 };
 
-export default Page1;
+export default MyCalendar;
