@@ -1,16 +1,18 @@
 import React from 'react';
 import Calendar from '../components/Calendar';
 import WeatherWidget from "../components/WeatherWidget";
-
+import './page.css';
 
 const MyCalendar = () => {
   return (
-    <div>
-        
+    <div className="my-calendar-container">
       <h1>My Calendar</h1>
-      <WeatherWidget />
-      <Calendar />
-
+      <div className="weather-widget">
+        <WeatherWidget />
+      </div>
+      <div className="calendar">
+        <Calendar />
+      </div>
     </div>
   );
 };

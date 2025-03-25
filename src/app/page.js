@@ -10,15 +10,15 @@ const Page = () => {
       setTheme(currentTheme);
     };
 
-    updateTheme(); // Устанавливаем тему при монтировании
+    updateTheme();
     const observer = new MutationObserver(updateTheme);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
-    return () => observer.disconnect(); // Очищаем наблюдатель при размонтировании
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="relative">
+    <div className="home-page relative">
       {theme === "light" && (
         <>
           <div className="texture-container top-right">
@@ -39,7 +39,7 @@ const Page = () => {
             <span className="text-black">ial</span>
             <span className="text-[#473879] font-bold"> CAL</span>
             <span className="text-black">endar</span>
-            </p>
+          </p>
         </div>
       </div>
     </div>

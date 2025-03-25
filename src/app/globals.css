@@ -2,25 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light Theme (default) */
 :root {
-  --background-color-light: #A39AD8;  /* Twilight Lavender */
-  --text-color-light: #000000;  /* Черный текст */
+  --background-color-light: #A39AD8; 
+  --text-color-light: #000000;
   --header-background-light: #ffffff;
-  --button-background-light: #6200ea;
+  --button-background-light: #000000;
   --button-text-light: #ffffff;
 }
 
-/* Dark Theme */
 [data-theme='dark'] {
-  --background-color-dark: #000000;  /* Очень темно фиолетовый */
-  --text-color-dark: #ffffff;  /* Белый текст */
+  --background-color-dark: #000000;
+  --text-color-dark: #000000;
   --header-background-dark: #333333;
-  --button-background-dark: #6200ea;
-  --button-text-dark: #ffffff;
+  --button-text-dark: #000000;
 }
 
-/* Глобальные стили */
+[data-theme='dark'] body {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+[data-theme='dark'] header {
+  background-color: var(--header-background-dark);
+}
+
+[data-theme='dark'] button {
+  background-color: var(--button-background-dark);
+  color: var(--button-text-dark);
+}
+
+[data-theme='dark'] .texture-container {
+  display: none;
+}
+
+[data-theme='dark'] .text-black {
+  color: white !important;
+}
+
 body {
   background-color: var(--background-color-light);
   color: var(--text-color-light);
@@ -28,6 +46,14 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -48,8 +74,8 @@ p {
 
 .auth-buttons button {
   background-color: #473879;
-  color: #ffffff;  /* Лавандовый текст */
-  border-radius: 50px;  /* Овальная форма */
+  color: #ffffff;
+  border-radius: 50px; 
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -58,8 +84,8 @@ p {
 }
 
 .auth-buttons button:hover {
-  background-color: #ffffff;  /* Лавандовый фон при ховере */
-  color: #473879;  /* Белый текст при ховере */
+  background-color: #ffffff;
+  color: #473879;
 }
 
 .user-button {
@@ -74,8 +100,8 @@ p {
   width: 280px;
   height: auto;
   opacity: 0.8;
-  z-index: 500;  /* Устанавливаем ниже кнопок */
-  pointer-events: none;  /* Текстуры не будут мешать кликам */
+  z-index: 500;
+  pointer-events: none;
 }
 
 .top-right {
@@ -95,14 +121,11 @@ p {
 
 .content {
   display: flex;
-  align-items: center; /* Центрируем по вертикали */
-  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center;
+  justify-content: center;
   background: none;
 }
 
-
-
-/* Стиль для кнопки смены темы */
 .theme-switcher {
   position: absolute;
   top: 16px;
@@ -116,23 +139,20 @@ p {
   cursor: pointer;
   border: none;
   font-size: 24px;
-  z-index: 1001; /* Убедитесь, что кнопка сверху других элементов */
+  z-index: 1001;
   transition: background-color 0.3s ease;
 }
 
-/* Черный круг для светлой темы */
 .theme-switcher.light-theme {
   background-color: #473879;
   color: white;
 }
 
-/* Белый круг для темной темы */
 .theme-switcher.dark-theme {
   background-color: #ffffff;
   color: black;
 }
 
-/* Стиль для кнопок авторизации, если они находятся в правом верхнем углу */
 .auth-buttons {
   position: fixed;
   top: 16px;
@@ -141,35 +161,6 @@ p {
   gap: 8px;
   z-index: 1000;
 }
-
-
-/* Применяем стили для темной темы */
-[data-theme='dark'] body {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
-
-[data-theme='dark'] header {
-  background-color: var(--header-background-dark);
-}
-
-[data-theme='dark'] button {
-  background-color: var(--button-background-dark);
-  color: var(--button-text-dark);
-}
-
-[data-theme='dark'] .texture-container {
-  display: none; /* Скрыть текстуры в темной теме */
-}
-
-[data-theme='dark'] .text-black {
-  color: white !important;
-}
-
-
-
-
-
 
 
 @media (max-width: 600px) {
@@ -192,7 +183,7 @@ p {
 
 @media (min-width: 1920px) {
     .logo {
-      width: 120px; /* Увеличенный размер */
+      width: 120px;
       height: 120px;
       transform: translateX(60px) translateY(-30px);
     }
@@ -205,43 +196,43 @@ p {
   }
 
   .auth-buttons button {
-    font-size: 18px;  /* Увеличиваем размер шрифта */
-    padding: 15px 30px;  /* Увеличиваем отступы */
+    font-size: 18px;
+    padding: 15px 30px;
   }
 
   .theme-switcher {
-    top: 40px;  /* Сдвигаем кнопку немного вниз */
-    right: 320px;  /* Отодвигаем кнопку для изменения темы */
-    width: 50px;  /* Увеличиваем ширину круга */
-    height: 50px;  /* Увеличиваем высоту круга */
-    font-size: 28px;  /* Увеличиваем размер шрифта для иконки */
+    top: 40px;
+    right: 320px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
   }
 
 
   h1 {
-    font-size: 100px;  /* Увеличиваем размер заголовка */
+    font-size: 100px;
   }
 
   p {
-    font-size: 60px;  /* Увеличиваем размер текста */
+    font-size: 60px;
   }
 
 
   .texture-container {
-    width: 500px;  /* Увеличиваем ширину текстуры */
-    opacity: 1;    /* Сделаем текстуру более заметной */
+    width: 500px;
+    opacity: 1;
   }
 
   .texture-image {
-    width: 100%;   /* Обеспечиваем, что текстура будет заполнять контейнер */
+    width: 100%;
     height: auto;
   }
 
   .user-button {
-    width: 100px; /* Увеличиваем размер кнопки */
-    height: 100px; /* Увеличиваем размер кнопки */
-    top: 50px; /* Опускаем кнопку ниже */
-    right: 32px; /* Немного отодвигаем кнопку вправо */
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    right: 32px;
   }
 
 }

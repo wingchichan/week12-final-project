@@ -1,12 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
+import './WeatherWidget.css';
 
 export default function WeatherWidget() {
   const [location, setLocation] = useState("");
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
 
-  const API_KEY = "8622541f9a9f43b1a5b143446252403"; // ваш API ключ
+  const API_KEY = "8622541f9a9f43b1a5b143446252403";
 
   const fetchWeather = async (query) => {
     try {
@@ -21,7 +22,7 @@ export default function WeatherWidget() {
         temperature: data.current.temp_c,
         description: data.current.condition.text,
         location: data.location.name,
-        icon: data.current.condition.icon, // добавляем иконку погоды
+        icon: data.current.condition.icon,
       });
       setError(null);
     } catch (err) {
@@ -30,14 +31,13 @@ export default function WeatherWidget() {
     }
   };
 
-  // Функция для получения текущего местоположения
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
-          fetchWeather(`${latitude},${longitude}`); // передаем координаты в запрос
+          fetchWeather(`${latitude},${longitude}`);
         },
         (error) => {
           setError("Error fetching location: " + error.message);
@@ -48,7 +48,6 @@ export default function WeatherWidget() {
     }
   };
 
-  // Вызов getLocation при монтировании компонента
   useEffect(() => {
     getLocation();
   }, []);
@@ -59,7 +58,7 @@ export default function WeatherWidget() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetchWeather(location); // Погода по городу, если указано место
+    fetchWeather(location);
   };
 
   return (
@@ -77,12 +76,12 @@ export default function WeatherWidget() {
       {error && <p>{error}</p>}
       {weather && (
         <div>
-          <p>
+          <p className="weather-info">
             {weather.location}: {weather.temperature}°C, {weather.description}
-          </p>
+            </p>
           {weather.icon && (
             <img
-              src={`https:${weather.icon}`} // Иконка погоды
+              src={`https:${weather.icon}`}
               alt={weather.description}
             />
           )}
