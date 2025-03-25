@@ -23,10 +23,16 @@ const NavBar = () => {
             My Groups
           </Link>
         </li>
+        <li>
+          <Link href="/all-calendars" className="nav-item calendar-link">
+            All Calendars
+          </Link>
+        </li>
       </ul>
     </nav>
   );
 };
+
 
 export default NavBar;
 
