@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A39AD8;
+    padding: 20px;
+    font-family: 'Red Hat Display', sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  
+  .footer-text {
+    font-size: 16px;
+  }
+  
+  .social-media {
+    display: flex;
+    gap: 20px;
+    
+  }
+  
+  .social-media a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .social-media a:hover {
+    color: #ffdb88;
+  }
+  

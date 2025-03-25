@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600&display=swap');
+
+.navbar {
+  background-color: #A39AD8;
+  padding: 15px;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: bold;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-item {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.logo {
+  position: absolute;
+  top: 3.5%;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-item {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo-item:hover {
+  color: #ffdb88;
+  background: none;
+}
+
+.italic-c {
+  font-style: italic;
+  color: #473879;
+}
+
+.calendar-link:hover {
+  background-color: #ffdb88;
+  border: 2px solid #333;
+  padding: 14px 22px;
+  border-radius: 0;
+}

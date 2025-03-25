@@ -10,6 +10,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import React from "react";
 import ThemeSwitcher from './components/ThemeSwitcher';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,6 +34,7 @@ const Layout = ({ children }) => {
       <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
         <body className="antialiased">
           <header>
+            <NavBar />
             <ThemeSwitcher />
             <SignedOut>
               <div className="auth-buttons">
@@ -42,10 +45,11 @@ const Layout = ({ children }) => {
             <SignedIn>
               <div className="user-button">
                 <UserButton />
-                </div>
-                </SignedIn>
+              </div>
+            </SignedIn>
           </header>
           <main>{children}</main>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
