@@ -38,6 +38,12 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+@media (max-width: 1024px) {
+  .my-calendar-container h1 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
 }
 
 .weather-widget {
@@ -49,6 +55,14 @@ body, html {
   margin-bottom: 20px;
   width: 300px;
   height: 320px;
+  margin: 0 auto 20px;
+}
+
+.calendar {
+  border: 2px solid #A39AD8;
+  border-radius: 10px;
+  padding: 10px;
+
 }
 
 .weather-widget input, .weather-widget button {
@@ -92,3 +106,4 @@ body, html {
   border-radius: 15px;
   padding: 10px;
 }
+

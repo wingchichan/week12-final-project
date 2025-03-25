@@ -1,11 +1,12 @@
 'use client';
-
 import React from 'react';
 import Calendar from '../components/Calendar';
 import WeatherWidget from "../components/WeatherWidget";
 import './page.css';
 import Link from 'next/link';
 import { useUser } from "@clerk/nextjs";
+
+// import NameCalendarForm from '../components/NameCalendarForm'
 
 const MyCalendar = () => {
   const { user } = useUser();
@@ -42,4 +43,3 @@ const MyCalendar = () => {
 };
 
 export default MyCalendar;
-
