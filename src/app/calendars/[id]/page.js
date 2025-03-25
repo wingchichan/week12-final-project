@@ -1,3 +1,7 @@
+
+export default function Page() {
+  return <p>Hello World</p>;
+
 import {auth} from "@clerk/nextjs/server"
 import {db} from "@/utilities/connect"
 import { redirect } from "next/navigation"
@@ -11,4 +15,5 @@ export default async function UserCalendar( {params} ) {
     return (
         <p>{individualCalendar.name}</p>
     )
+
 }
