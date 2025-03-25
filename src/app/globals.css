@@ -45,7 +45,6 @@ body {
   font-family: 'Cormorant', serif;
   margin: 0;
   padding: 0;
-  display: flex;
   justify-content: center;
   height: 100vh;
   text-align: center;
@@ -93,6 +92,15 @@ p {
   top: 16px;
   right: 16px;
   z-index: 1000;
+}
+
+.logo-home {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  transform: translate(-50%, -50%);
 }
 
 .texture-container {
@@ -162,6 +170,10 @@ p {
   z-index: 1000;
 }
 
+footer {
+  position: relative; 
+  z-index: 1000; 
+}
 
 @media (max-width: 600px) {
   .auth-buttons {

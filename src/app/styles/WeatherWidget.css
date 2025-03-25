@@ -1,13 +1,12 @@
 .weather-widget {
   background: linear-gradient(135deg, #A39AD8, #473879);
-  padding: 25px;
-  border-radius: 12px;
+  padding: 8px;
+  border-radius: 8px;
   color: white;
-  width: 320px;
+  width: 180px;
   margin: 0 auto 20px;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .weather-widget h2 {
@@ -16,12 +15,13 @@
 }
 
 .weather-widget input {
-  width: 100%;
+  width: 90%;
   padding: 12px;
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid #ccc;
   margin-bottom: 15px;
+  color: black;
 }
 
 .weather-widget button {
@@ -45,6 +45,12 @@
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
+}
+
+.weather-widget .weather-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .weather-widget .weather-icon {

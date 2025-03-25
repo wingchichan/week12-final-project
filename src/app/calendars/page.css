@@ -25,11 +25,19 @@ body, html {
   position: relative;
 }
 
-@media (max-width: 1024px) {
-  .my-calendar-container h1 {
-    font-size: 36px;
-    margin-top: 20px;
-  }
+.calendar-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .weather-widget {
@@ -38,13 +46,9 @@ body, html {
   border-radius: 8px;
   color: white;
   width: fit-content;
-  margin: 0 auto 20px;
-}
-
-.calendar {
-  border: 2px solid #A39AD8;
-  border-radius: 10px;
-  padding: 10px;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 320px;
 }
 
 .weather-widget input, .weather-widget button {
@@ -65,4 +69,26 @@ body, html {
   border: none;
   cursor: pointer;
   font-size: 16px;
+}
+
+.add-event-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #473879;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-event-button button:hover {
+  background-color: #A39AD8;
+}
+
+.calendar {
+  border: 2px solid #A39AD8;
+  border-radius: 15px;
+  padding: 10px;
 }
