@@ -1,6 +1,7 @@
 import {auth} from "@clerk/nextjs/server"
 import {db} from "@/utilities/connect"
 import { redirect } from "next/navigation"
+import '../nameCalendarForm/page.css';
 
 export default async function NameCalendarForm() {
     const {userId} = await auth()
@@ -23,10 +24,13 @@ export default async function NameCalendarForm() {
     }
 
     return (
+        <div className="form-container">
         <form action = {handleSubmit}>
+            <h1>Please enter the name of your new calendar</h1>
             <input name="calendarName" placeholder="Enter a name for your calendar: " />
             <button type = "submit">Submit</button>
         </form>
+        </div>
     )
 
 }
