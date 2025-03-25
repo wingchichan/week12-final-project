@@ -3,19 +3,236 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-color-light: #A39AD8; 
+  --text-color-light: #000000;
+  --header-background-light: #ffffff;
+  --button-background-light: #000000;
+  --button-text-light: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme='dark'] {
+  --background-color-dark: #000000;
+  --text-color-dark: #000000;
+  --header-background-dark: #333333;
+  --button-text-dark: #000000;
+}
+
+[data-theme='dark'] body {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+[data-theme='dark'] header {
+  background-color: var(--header-background-dark);
+}
+
+[data-theme='dark'] button {
+  background-color: var(--button-background-dark);
+  color: var(--button-text-dark);
+}
+
+[data-theme='dark'] .texture-container {
+  display: none;
+}
+
+[data-theme='dark'] .text-black {
+  color: white !important;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  font-family: 'Cormorant', serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: -20px;
+}
+
+p {
+  color: black;
+  font-size: 40px;
+}
+
+.auth-buttons button {
+  background-color: #473879;
+  color: #ffffff;
+  border-radius: 50px; 
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  
+}
+
+.auth-buttons button:hover {
+  background-color: #ffffff;
+  color: #473879;
+}
+
+.user-button {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+}
+
+.texture-container {
+  position: fixed;
+  width: 280px;
+  height: auto;
+  opacity: 0.8;
+  z-index: 500;
+  pointer-events: none;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.texture-image {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 16px;
+  right: 300px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  font-size: 24px;
+  z-index: 1001;
+  transition: background-color 0.3s ease;
+}
+
+.theme-switcher.light-theme {
+  background-color: #473879;
+  color: white;
+}
+
+.theme-switcher.dark-theme {
+  background-color: #ffffff;
+  color: black;
+}
+
+.auth-buttons {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+}
+
+
+@media (max-width: 600px) {
+  .auth-buttons {
+    top: 20px;
+    right: 20px;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .auth-buttons button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .theme-switcher {
+    right: 180px;
+  }
+}
+
+@media (min-width: 1920px) {
+    .logo {
+      width: 120px;
+      height: 120px;
+      transform: translateX(60px) translateY(-30px);
+    }
+  
+  .auth-buttons {
+    top: 40px;
+    right: 40px;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .auth-buttons button {
+    font-size: 18px;
+    padding: 15px 30px;
+  }
+
+  .theme-switcher {
+    top: 40px;
+    right: 320px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+
+  h1 {
+    font-size: 100px;
+  }
+
+  p {
+    font-size: 60px;
+  }
+
+
+  .texture-container {
+    width: 500px;
+    opacity: 1;
+  }
+
+  .texture-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .user-button {
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    right: 32px;
+  }
+
 }

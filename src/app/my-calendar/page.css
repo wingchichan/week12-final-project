@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+.my-calendar-container {
+  background-color: white !important;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  overflow: auto;
+}
+
+.my-calendar-container h1 {
+  color: #473879;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  z-index: 10;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .my-calendar-container h1 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+}
+
+.weather-widget {
+  background: linear-gradient(135deg, #A39AD8, #473879);
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  width: fit-content;
+  margin: 0 auto 20px;
+}
+
+.calendar {
+  border: 2px solid #A39AD8;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.weather-widget input, .weather-widget button {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.weather-widget input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.weather-widget button {
+  background-color: #473879;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
