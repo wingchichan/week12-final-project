@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Calendar from '../components/Calendar';
+"use client";
+import React from "react";
+import Calendar from "../components/Calendar";
 import WeatherWidget from "../components/WeatherWidget";
-import './page.css';
-import Link from 'next/link';
+import "./page.css";
+import Link from "next/link";
 import { useUser } from "@clerk/nextjs";
 
 // import NameCalendarForm from '../components/NameCalendarForm'
@@ -14,12 +14,10 @@ const MyCalendar = () => {
 
   return (
     <div>
-
       <div className="my-calendar-container">
         <h1>Hello, {userName}!</h1>
 
         <div className="calendar-layout">
-
           <div className="left-section">
             <div className="weather-widget">
               <WeatherWidget />
@@ -36,8 +34,6 @@ const MyCalendar = () => {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };
