@@ -1,0 +1,77 @@
+.calendars-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start content from the top */
+    align-items: center;
+    padding: 20px;
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    overflow-y: scroll; /* Allow scrolling */
+    text-align: center;
+    gap: 20px;
+  }
+  
+  /* Hide scrollbar but keep scrolling */
+  .calendars-container::-webkit-scrollbar {
+    width: 0px; /* Hide the scrollbar */
+    height: 0px; /* If you also want to hide horizontal scrollbars */
+  }
+  
+  .calendars-container::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Make thumb invisible */
+  }
+  
+  /* Each calendar container (can be styled as a card) */
+  .calendar-item {
+    background-color: #473879;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px; /* Reduced font size */
+    font-weight: bold;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px; /* Decrease the width of the items */
+    text-align: center;
+  }
+  
+  /* Hover effect for calendar items */
+  .calendar-item:hover {
+    background-color: #ffffff;
+    color: #473879;
+  }
+  
+  /* Dark mode styles */
+  [data-theme="dark"] .calendar-item {
+    background-color: #ffffff;
+    color: #473879;
+  }
+  
+  [data-theme="dark"] .calendar-item:hover {
+    background-color: #473879;
+    color: #ffffff;
+  }
+  
+  /* Link styles inside the calendar item */
+  .calendar-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .calendar-item {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+  }
+  
+  @media (min-width: 1920px) {
+    .calendar-item {
+      font-size: 24px;
+      padding: 18px 36px;
+    }
+  }
+  
