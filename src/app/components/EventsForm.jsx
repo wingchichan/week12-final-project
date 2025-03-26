@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const EventsForm = () => {
   const [formData, setFormData] = useState({
-    activity: '',
-    location: '',
-    eventTime: '',
-    price: ''
+    activity: "",
+    location: "",
+    eventTime: "",
+    price: "",
   });
 
   const handleChange = (e) => {
@@ -18,10 +18,17 @@ const EventsForm = () => {
       activity: formData.activity,
       location: formData.location,
       event_time: formData.eventTime,
-      price_per_person: formData.price ? parseFloat(formData.price).toFixed(2) : null
+      price_per_person: formData.price
+        ? parseFloat(formData.price).toFixed(2)
+        : null,
     };
-    console.log('Event data to invite friends:', eventData);
-    setFormData({ activity: '', location: '', eventTime: '', price: '' });
+    console.log("Event data to invite friends:", eventData);
+    setFormData({ activity: "", location: "", eventTime: "", price: "" });
+
+    // await db.query(
+    //   `INSERT INTO calendar_events (activity, location, event_time, price_per_person) VALUES ($1, $2, $3, $4)`,
+    //   [activity, location, event_time, price_per_person]
+    // );
   };
 
   return (
