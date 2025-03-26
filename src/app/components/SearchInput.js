@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import '../styles/SearchInput.css';
+
 
 export const SearchInput = () => {
   const router = useRouter();
@@ -24,13 +26,13 @@ export const SearchInput = () => {
   };
 
   return (
-    <div className="search__input">
+    <div className="search-bar">
       <input
         type="text"
         value={inputValue}
         onChange={handleChange}
         onKeyDown={handleKeyPress}
-        placeholder="Search calendars"
+        placeholder="Type to search calendars"
       />
     </div>
   );

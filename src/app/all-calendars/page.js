@@ -20,7 +20,7 @@ export default async function AllCalendarsPage({ searchParams }) {
       <SearchInput />
       <div>
         {allCalendars.length === 0 ? (
-          <p>Where are the calendars? :(</p> 
+          <p>Oops! No calendars found :(</p> 
         ) : (
           allCalendars.map((calendar) => ( 
             <div key={calendar.id} className="calendar-item">
