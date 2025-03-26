@@ -10,7 +10,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import React from "react";
 import ThemeSwitcher from './components/ThemeSwitcher';
-import NavBar from './components/NavBar';
+import ClientNavBar from './components/ClientNavBar';
 import Footer from './components/Footer';
 
 const geistSans = Geist({
@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
       <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
         <body className="antialiased">
           <header>
-            <NavBar />
+            <ClientNavBar />
             <ThemeSwitcher />
             <SignedOut>
               <div className="auth-buttons">
