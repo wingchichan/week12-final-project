@@ -56,5 +56,4 @@ export default async function UserCalendar( {params} ) {
             <MyCalendar />
         </div>
     )
-
 }
