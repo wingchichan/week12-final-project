@@ -30,7 +30,7 @@ export const SearchInput = () => {
         value={inputValue}
         onChange={handleChange}
         onKeyDown={handleKeyPress}
-        placeholder="search calendars"
+        placeholder="Search calendars"
       />
     </div>
   );
