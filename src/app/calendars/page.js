@@ -3,19 +3,22 @@ import Calendar from "../components/Calendar";
 import WeatherWidget from "../components/WeatherWidget";
 import "./page.css";
 import Link from "next/link";
-import { useUser } from "@clerk/nextjs";
-import { getName } from "@/utilities/actions";
+import { auth } from "@clerk/nextjs/server";
+import { db } from "@/utilities/connect";
 
-// import NameCalendarForm from '../components/NameCalendarForm'
+const MyCalendar = async () => {
+  const { userId } = await auth();
+  const userInfo = await db.query(`SELECT * FROM users WHERE clerk_id = $1`, [
+    userId,
+  ]);
+  console.log(userInfo);
 
-const MyCalendar = () => {
-  // const { user } = useUser();
-  // const userName = user?.firstName || "Guest";
+  const userName = userInfo.rows[0].name;
 
   return (
     <div>
       <div className="my-calendar-container">
-        <h1>Hello</h1>
+        <h1>Hello {userName}</h1>
 
         <div className="calendar-layout">
           <div className="left-section">
