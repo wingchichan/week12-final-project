@@ -1,4 +1,11 @@
-import EventsForm from "@/app/components/EventsForm";
+
+import EventsForm from "../components/eventsForm";
+import './page.css';
+
+export default function EventsPage() {
+
+
+
 import { handleAddEvent } from "@/utilities/actions";
 import { db } from "@/utilities/connect";
 import { auth } from "@clerk/nextjs/server";
@@ -26,3 +33,4 @@ export default async function EventsPage() {
     />
   );
 }
+
