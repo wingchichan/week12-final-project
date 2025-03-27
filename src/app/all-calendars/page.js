@@ -29,8 +29,9 @@ export default async function AllCalendarsPage({ searchParams }) {
           <Link href={`/calendars/${calendar.id}`}>{calendar.name}</Link>
         </div>
       ))}
+    </div>
 
- 
+    )
   
   return (
     <div className="calendars-container">

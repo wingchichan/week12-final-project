@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Calendar from "../components/Calendar";
 import WeatherWidget from "../components/WeatherWidget";
@@ -10,13 +9,13 @@ import { getName } from "@/utilities/actions";
 // import NameCalendarForm from '../components/NameCalendarForm'
 
 const MyCalendar = () => {
-  const { user } = useUser();
-  const userName = user?.firstName || "Guest";
+  // const { user } = useUser();
+  // const userName = user?.firstName || "Guest";
 
   return (
     <div>
       <div className="my-calendar-container">
-        <h1>Hello, {userName}!</h1>
+        <h1>Hello</h1>
 
         <div className="calendar-layout">
           <div className="left-section">
@@ -31,6 +30,7 @@ const MyCalendar = () => {
           </div>
 
           <div className="calendar">
+            {/* select all from events, needs to have title, start date and end date */}
             <Calendar />
           </div>
         </div>
