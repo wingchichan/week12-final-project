@@ -1,9 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-
 const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
-  
   const [formData, setFormData] = useState({
     activity: "",
     location: "",
@@ -30,12 +28,11 @@ const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
     // console.log("Event data to invite friends:", eventData);
     setFormData({ activity: "", location: "", eventTime: "", price: "" });
 
-    fetch("http://localhost:3000/api", {
+    fetch("https://week12-final-project-five.vercel.app/api", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(eventData),
     });
-    
   };
 
   return (
@@ -83,4 +80,3 @@ const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
 };
 
 export default EventsForm;
-
