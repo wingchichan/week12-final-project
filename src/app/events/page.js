@@ -1,5 +1,6 @@
 import EventsForm from "../components/EventsForm";
-import "./page.css";
+import './page.css';
+
 import { handleAddEvent } from "@/utilities/actions";
 import { db } from "@/utilities/connect";
 import { auth } from "@clerk/nextjs/server";
