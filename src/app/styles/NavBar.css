@@ -4,17 +4,17 @@
   font-family: 'Red Hat Display', sans-serif;
   font-weight: bold;
   border-bottom: 2px solid #473879;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
+  display: flex; /* Используем flexbox для выравнивания */
+  justify-content: space-between; /* Это распределяет пространство между логотипом и навигационными элементами */
+  align-items: center; /* Вертикально выравниваем элементы */
 }
 
-.nav-list-c {
+.nav-list {
   list-style: none;
   display: flex;
   gap: 20px;
-  justify-content: center;
-  flex-grow: 1;
+  justify-content: center; /* Центрируем ссылки навигации */
+  flex-grow: 1; /* Заставляем блок с навигацией занимать все доступное пространство */
 }
 
 .nav-item {
@@ -54,4 +54,3 @@
   padding: 12px 22px;
   border-radius: 0;
 }
-
