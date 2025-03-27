@@ -11,8 +11,6 @@ const MyCalendar = async () => {
   const userInfo = await db.query(`SELECT * FROM users WHERE clerk_id = $1`, [
     userId,
   ]);
-  console.log(userInfo);
-
   const userName = userInfo.rows[0].name;
 
   return (
