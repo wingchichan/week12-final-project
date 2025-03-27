@@ -18,27 +18,28 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const MyCalendar = () => {
-  const [eventsData, setEventsData] = useState([
-    {
-      title: 'Sample Event',
-      start: new Date(),
-      end: new Date(),
-    },
-  ]);
+const MyCalendar = ({eventList}) => {
 
-  const handleSelect = ({ start, end }) => {
-    const title = window.prompt("New Event name");
-    if (title)
-      setEventsData([
-        ...eventsData,
-        {
-          start,
-          end,
-          title,
-        }
-      ]);
-  };
+  // const [eventsData, setEventsData] = useState([
+  //   {
+  //     title: 'Sample Event',
+  //     start: new Date(),
+  //     end: new Date(),
+  //   },
+  // ]);
+
+  // const handleSelect = ({ start, end }) => {
+  //   const title = window.prompt("New Event name");
+  //   if (title)
+  //     setEventsData([
+  //       ...eventsData,
+  //       {
+  //         start,
+  //         end,
+  //         title,
+  //       }
+  //     ]);
+  // };
 
   return (
     <div style={{ height: '100vh' }}>
