@@ -5,6 +5,7 @@ import WeatherWidget from "../components/WeatherWidget";
 import "./page.css";
 import Link from "next/link";
 import { useUser } from "@clerk/nextjs";
+import { getName } from "@/utilities/actions";
 
 // import NameCalendarForm from '../components/NameCalendarForm'
 
@@ -23,7 +24,7 @@ const MyCalendar = () => {
               <WeatherWidget />
             </div>
             <div className="add-event-button">
-              <Link href="/add-event">
+              <Link href="/events">
                 <button>Add New Event Form</button>
               </Link>
             </div>
