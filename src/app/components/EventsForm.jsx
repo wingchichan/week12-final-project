@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import '../styles/EventsForm.css';
-
 
 const EventsForm = () => {
   const [formData, setFormData] = useState({

@@ -12,10 +12,6 @@ const MyCalendar = () => {
   const userName = user?.firstName || "Guest";
   const [showForm, setShowForm] = useState(false);
 
-  const toggleForm = () => {
-    setShowForm(!showForm);
-  };
-
   return (
     <div>
       <div className="my-calendar-container">
@@ -23,7 +19,9 @@ const MyCalendar = () => {
         <div className="calendar-layout">
           <div className="left-section">
             <div className="add-event-button">
-              <button className="show-form-btn" onClick={toggleForm}>Add New Event</button>
+            <Link href="/events">
+              <button className="show-form-btn">Add New Event</button>
+              </Link>
             </div>
             {showForm && (
               <div className="form-container show-form">
