@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600&display=swap');
-
-.navbar {
-  background-color: #A39AD8;
+.navbar-с {
+  background-color: #473879;
   padding: 15px;
   font-family: 'Red Hat Display', sans-serif;
   font-weight: bold;
+  border-bottom: 2px solid #473879;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center; 
+  flex-grow: 1; 
 }
 
 .nav-item {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 18px;
   padding: 10px 20px;
@@ -23,9 +26,6 @@
 }
 
 .logo {
-  position: absolute;
-  top: 3.5%;
-  left: 20px;
   font-size: 24px;
   font-weight: bold;
 }
@@ -44,12 +44,13 @@
 
 .italic-c {
   font-style: italic;
-  color: #473879;
+  color: #A39AD8;
 }
 
 .calendar-link:hover {
+  color: #000000;
   background-color: #ffdb88;
-  border: 2px solid #333;
-  padding: 14px 22px;
+  border: 5px solid #473879;
+  padding: 12px 22px;
   border-radius: 0;
 }

@@ -84,7 +84,7 @@ export default function WeatherWidget() {
   };
 
   return (
-    <div className="weather-widget">
+    <>
       <h2>Weather Widget</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -103,22 +103,20 @@ export default function WeatherWidget() {
       </form>
       {error && <p>{error}</p>}
       {weather && (
-        <div>
+        <div className="weather-info-container">
           <p className="weather-info">
             {weather.location}: {weather.temperature}°C, {weather.description}
           </p>
           {weather.icon && (
-            <div className="weather-icon-container">
-              <img
-                className="weather-icon"
-                src={`https:${weather.icon}`}
-                alt={weather.description}
-              />
-            </div>
+            <img
+              className="weather-icon"
+              src={`https:${weather.icon}`}
+              alt={weather.description}
+            />
           )}
         </div>
       )}
-    </div>
+    </>
   );
 }  
 

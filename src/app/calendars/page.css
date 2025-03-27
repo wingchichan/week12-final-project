@@ -63,7 +63,6 @@ body, html {
   border: 2px solid #A39AD8;
   border-radius: 10px;
   padding: 10px;
-
 }
 
 .weather-widget input, .weather-widget button {
@@ -90,16 +89,17 @@ body, html {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #473879;
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
+  margin-bottom: 20px;
 }
 
 .add-event-button button:hover {
-  background-color: #A39AD8;
+  background-color: #45a049;
 }
 
 .calendar {
@@ -107,4 +107,3 @@ body, html {
   border-radius: 15px;
   padding: 10px;
 }
- 

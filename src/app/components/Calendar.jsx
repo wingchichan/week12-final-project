@@ -43,7 +43,7 @@ const MyCalendar = ({ eventList }) => {
   return (
     <div style={{ height: "100vh" }}>
       <Calendar
-        views={["day", "agenda", "work_week", "month"]}
+        views={["day", "week", "month", "agenda"]}
         selectable
         localizer={localizer}
         defaultDate={new Date()}
