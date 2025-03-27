@@ -1,12 +1,10 @@
 import { auth } from "@clerk/nextjs/server";
 import { db } from "@/utilities/connect";
-import React, { useState } from "react";
 import React from "react";
 import Calendar from "../components/Calendar";
 import WeatherWidget from "../components/WeatherWidget";
 import "./page.css";
 import Link from "next/link";
-import EventsForm from "../components/EventsForm";
 
 const MyCalendar = async () => {
   const { userId } = await auth();
@@ -44,31 +42,23 @@ const MyCalendar = async () => {
     end: new Date(event.event_time), // Adjust end time if needed
   }));
 
-
   return (
     <div>
       <div className="my-calendar-container">
-
-        <h1>Hello, {userName}!</h1>
+        <h1>Hello {userName}</h1>
 
         <div className="calendar-layout">
           <div className="left-section">
-            <div className="add-event-button">
-
-            <Link href="/events">
-              <button className="show-form-btn">Add New Event</button>
-            </Link>
-  
-            </div>
-            {showForm && (
-              <div className="form-container show-form">
-                <EventsForm />
-              </div>
-            )}
             <div className="weather-widget">
               <WeatherWidget />
             </div>
+            <div className="add-event-button">
+              <Link href="/events">
+                <button>Add New Event</button>
+              </Link>
+            </div>
           </div>
+
           <div className="calendar">
             <Calendar eventList={formattedEvents} />
           </div>
