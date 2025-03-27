@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
-import { format, parse, startOfWeek, getDay } from 'date-fns';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import { enUS } from 'date-fns/locale';
+import React, { useState } from "react";
+import { Calendar, dateFnsLocalizer } from "react-big-calendar";
+import { format, parse, startOfWeek, getDay } from "date-fns";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import { enUS } from "date-fns/locale";
 
 const locales = {
-  'en-US': enUS,
+  "en-US": enUS,
 };
 
 const localizer = dateFnsLocalizer({
@@ -18,8 +18,7 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const MyCalendar = ({eventList}) => {
-
+const MyCalendar = ({ eventList }) => {
   // const [eventsData, setEventsData] = useState([
   //   {
   //     title: 'Sample Event',
@@ -42,17 +41,17 @@ const MyCalendar = ({eventList}) => {
   // };
 
   return (
-    <div style={{ height: '100vh' }}>
+    <div style={{ height: "100vh" }}>
       <Calendar
         views={["day", "agenda", "work_week", "month"]}
         selectable
         localizer={localizer}
         defaultDate={new Date()}
         defaultView="month"
-        events={eventsData}
-        style={{ height: '100%' }}
+        // events={eventsData}
+        style={{ height: "100%" }}
         onSelectEvent={(event) => alert(event.title)}
-        onSelectSlot={handleSelect}
+        // onSelectSlot={handleSelect}
       />
     </div>
   );

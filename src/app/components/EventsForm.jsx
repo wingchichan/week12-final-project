@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
-const EventsForm = ({ handleAddEvent, calendarID }) => {
-  console.log(calendarID);
+const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
+  // console.log(createdBy);
   const [formData, setFormData] = useState({
     activity: "",
     location: "",
@@ -12,7 +12,6 @@ const EventsForm = ({ handleAddEvent, calendarID }) => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
   };
 
   const handleSubmit = (e) => {
@@ -25,9 +24,10 @@ const EventsForm = ({ handleAddEvent, calendarID }) => {
       price_per_person: formData.price
         ? parseFloat(formData.price).toFixed(2)
         : null,
+      userID: userID,
     };
-    console.log("Event data to invite friends:", eventData);
-    // setFormData({ activity: "", location: "", eventTime: "", price: "" });
+    // console.log("Event data to invite friends:", eventData);
+    setFormData({ activity: "", location: "", eventTime: "", price: "" });
 
     fetch("http://localhost:3000/api", {
       method: "POST",
