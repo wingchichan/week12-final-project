@@ -42,7 +42,7 @@
 body {
   background-color: var(--background-color-light);
   color: var(--text-color-light);
-  font-family: 'Cormorant', serif;
+  font-family: 'Red Hat Display', sans-serif;
   margin: 0;
   padding: 0;
   justify-content: center;
@@ -105,7 +105,7 @@ p {
 
 .texture-container {
   position: fixed;
-  width: 280px;
+  width: 330px;
   height: auto;
   opacity: 0.8;
   z-index: 500;
@@ -115,6 +115,7 @@ p {
 .top-right {
   top: 0;
   right: 0;
+  width: 350px;
 }
 
 .bottom-left {
@@ -135,9 +136,9 @@ p {
 }
 
 .theme-switcher {
-  position: absolute;
+  position: fixed;
   top: 16px;
-  right: 300px;
+  right: 230px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
