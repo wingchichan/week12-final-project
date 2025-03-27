@@ -30,7 +30,6 @@ const Page = () => {
         </>
       )}
       <div className="content flex items-center justify-center space-x-4">
-        <img src="/logo.webp" alt="Logo" className="w-20 h-20 logo-home" />
         <div>
           <h1>SOCAL</h1>
           <p>
@@ -42,6 +41,7 @@ const Page = () => {
           </p>
         </div>
       </div>
+
     </div>
   );
 };
