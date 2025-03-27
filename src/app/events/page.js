@@ -1,5 +1,5 @@
 
-import EventsForm from "../components/eventsForm";
+import EventsForm from "../components/EventsForm";
 import './page.css';
 import { handleAddEvent } from "@/utilities/actions";
 import { db } from "@/utilities/connect";
