@@ -19,7 +19,6 @@ export default async function AllCalendarsPage({ searchParams }) {
   console.log(allCalendars);
 
 
-  const userName = getName();
 
   return (
     <div>

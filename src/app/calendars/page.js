@@ -1,6 +1,5 @@
 import { auth } from "@clerk/nextjs/server";
 import { db } from "@/utilities/connect";
-import React, { useState } from "react";
 import React from "react";
 import Calendar from "../components/Calendar";
 import WeatherWidget from "../components/WeatherWidget";
