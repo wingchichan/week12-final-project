@@ -31,13 +31,17 @@ const MyCalendar = async () => {
 
   // Get events for this calendar
   const eventsData = await db.query(
-    `SELECT activity, event_time FROM calendar_events WHERE calendar_id = $1`,
+    `SELECT activity, location, event_time, price_per_person 
+     FROM calendar_events 
+     WHERE calendar_id = $1`,
     [calendarID]
   );
 
   // Format events for react-big-calendar
   const formattedEvents = eventsData.rows.map((event) => ({
     title: event.activity,
+    location: event.location,
+    price_per_person: event.price_per_person,
     start: new Date(event.event_time),
     end: new Date(event.event_time), // Adjust end time if needed
   }));
@@ -69,4 +73,3 @@ const MyCalendar = async () => {
 };
 
 export default MyCalendar;
-

@@ -19,6 +19,12 @@ const localizer = dateFnsLocalizer({
 });
 
 const MyCalendar = ({ eventList }) => {
+  const handleEventClick = (event) => {
+    alert(
+      `Event: ${event.title}\nLocation: ${event.location}\nPrice Per Person: £${event.price_per_person}`
+    );
+  };
+
   return (
     <div style={{ height: "100vh" }}>
       <Calendar
@@ -29,10 +35,12 @@ const MyCalendar = ({ eventList }) => {
         defaultView="month"
         events={eventList}
         style={{ height: "100%" }}
-        onSelectEvent={(event) => alert(event.title)}
+        onSelectEvent={handleEventClick}
       />
     </div>
   );
 };
 
 export default MyCalendar;
+
+
