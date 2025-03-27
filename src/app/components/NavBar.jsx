@@ -6,13 +6,13 @@ import '../styles/NavBar.css';
 
 const NavBar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar-с">
+      <div className="logo">
+        <Link href="/" className="nav-item logo-item">
+          SO<span className="italic-c">С</span>AL
+        </Link>
+      </div>
       <ul className="nav-list">
-        <li className="logo">
-          <Link href="/" className="nav-item logo-item">
-            SO<span className="italic-c">С</span>AL
-          </Link>
-        </li>
         <li>
           <Link href="/calendars" className="nav-item calendar-link">
             My Calendar
@@ -33,6 +33,4 @@ const NavBar = () => {
   );
 };
 
-
 export default NavBar;
-

@@ -1,100 +1,86 @@
-/* EventsForm.css */
-
-/* Hide the form initially */
 .form-container {
-    position: relative;
-  }
-  
-  .show-form-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .show-form-btn:hover {
-    background-color: #45a049;
-  }
-  
-  /* When the form is visible, apply a darkened background */
-  .form-container.show-form {
-    position: relative;
-  }
-  
-  .form-container.show-form::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Darken the background */
-    z-index: 10; /* Ensure the overlay stays on top */
-  }
-  
-  /* Style the form when it appears */
+  position: relative;
+}
+
+.show-form-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #45a049 !important;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+}
+
+.left-section .weather-widget {
+  margin-top: 20px;
+}
+
+.show-form-btn:hover {
+  background-color: #473879;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #473879;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 600px) {
   form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 20; /* Ensure the form stays above the background overlay */
+    padding: 15px;
   }
-  
-  form div {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
-  
+
+  input,
   button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 14px;
   }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  @media (max-width: 600px) {
-    form {
-      padding: 15px;
-    }
-  
-    input,
-    button {
-      font-size: 14px;
-    }
-  }
-  
+}

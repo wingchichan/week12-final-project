@@ -6,13 +6,19 @@ html, body {
     flex-direction: column;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .page-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 100px;
     box-sizing: border-box;
     text-align: center;
     background-color: #f7f7f7;
@@ -39,12 +45,13 @@ h1 {
 }
 
 input {
-    width: 70%;
+    width: 90%;
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    transition: border-color 0.3s ease;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -56,7 +63,7 @@ input:focus {
 }
 
 button {
-    width: 70%;
+    width: 90%;
     padding: 12px;
     font-size: 16px;
     font-weight: bold;
@@ -78,9 +85,7 @@ button:hover {
 footer {
     width: 100%;
     text-align: center;
-    padding: 10px;
-    background-color: #473879;
-    color: white;
-    position: relative;
     margin-top: auto;
+    z-index: 501;
+    position: relative; 
 }
