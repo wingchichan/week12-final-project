@@ -1,10 +1,11 @@
 "use server";
 import { db } from "./connect";
 import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
 export async function handleAddEvent(formData) {
   console.log(formData);
-
+  redirect("/calendars")
   //   const { activity, location, event_time, price_per_person } = formData;
   try {
     // db.query(

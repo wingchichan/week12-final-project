@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 
+
 const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
-  // console.log(createdBy);
+  
   const [formData, setFormData] = useState({
     activity: "",
     location: "",
@@ -34,6 +35,7 @@ const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
       headers: { "content-type": "application/json" },
       body: JSON.stringify(eventData),
     });
+    
   };
 
   return (
@@ -81,3 +83,4 @@ const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
 };
 
 export default EventsForm;
+
