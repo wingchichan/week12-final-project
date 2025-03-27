@@ -15,8 +15,14 @@ export default async function EventsPage() {
     `SELECT id FROM calendars WHERE created_by = $1`,
     [userID]
   );
-
+  console.log(calendarJoin);
   const calendarID = calendarJoin.rows[0].id;
 
-  return <EventsForm handleAddEvent={handleAddEvent} calendarID={calendarID} />;
+  return (
+    <EventsForm
+      handleAddEvent={handleAddEvent}
+      calendarID={calendarID}
+      userID={userID}
+    />
+  );
 }

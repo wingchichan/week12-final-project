@@ -3,16 +3,6 @@ import Calendar from "../components/Calendar";
 import WeatherWidget from "../components/WeatherWidget";
 import "./page.css";
 import Link from "next/link";
-
-import { useUser } from "@clerk/nextjs";
-import { getName } from "@/utilities/actions";
-//import connect
-// import NameCalendarForm from '../components/NameCalendarForm'
-
-const MyCalendar = () => {
-  // const { user } = useUser(); REPLACE WITH AUTH
-  // const userName = user?.firstName || "Guest";
-=======
 import { auth } from "@clerk/nextjs/server";
 import { db } from "@/utilities/connect";
 
@@ -23,10 +13,8 @@ const MyCalendar = async () => {
   ]);
   const userName = userInfo.rows[0].name;
 
-
   //db.query get events info based on user id, pass an event list to the calendar
   //ask chatGPT, give it info from databse, ask it how to format it to fit the props of the calendar component
-  
 
   return (
     <div>
