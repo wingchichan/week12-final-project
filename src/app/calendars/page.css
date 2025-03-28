@@ -1,62 +1,46 @@
-
-
-.main-container {
-  display: flex;
+body, html {
+  height: 100%;
   flex-direction: column;
-  min-height: 100vh;
-}
-
-.calendar-container {
-  flex-grow: 1;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 .my-calendar-container {
-  background-color: white ;
-  padding: 20px;
-  text-align: center;
-  overflow: auto;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 80vh;
-  height: auto;
 }
 
-/* Заголовок */
+.footer {
+  margin-top: 40px;
+}
+
+.my-calendar-container {
+  background-color: white !important;
+  text-align: center;
+  overflow: auto;
+}
+
 .my-calendar-container h1 {
   color: #473879;
-  font-size: 36px;
-  margin-top: 40px;
+  font-size: 50px;
   margin-bottom: 20px;
+  margin-top: 40px;
   z-index: 10;
   position: relative;
 }
 
-/* Основной лэйаут */
 .calendar-layout {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Левая колонка */
 .left-section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Виджет погоды */
 .weather-widget {
   background: linear-gradient(135deg, #A39AD8, #473879);
   padding: 15px;
@@ -67,11 +51,12 @@
   margin-bottom: 20px;
 }
 
-/* Календарь */
 .calendar {
   border: 2px solid #A39AD8;
   border-radius: 10px;
   padding: 10px;
+  transform: scale(0.8);
+  transform-origin: top center;
 }
 
 
@@ -120,6 +105,11 @@
   top: -20px;
 }
 
+.weather-error {
+  font-size: 16px;
+  color: white;
+}
+
 .add-event-button button {
   padding: 10px 20px;
   font-size: 20px;
@@ -136,94 +126,6 @@
 
 .add-event-button button:hover {
   background-color: #473879;
-}
-
-
-
-@media (max-width: 768px) {
-  .calendar-layout {
-    flex-direction: column; /* В столбик */
-    align-items: center;
-    gap: 20px;
-  }
-
-  .my-calendar-container h1 {
-    font-size: 28px;
-    margin-top: 20px;
-  }
-
-  .weather-widget {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .calendar {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .add-event-button button {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-@media (min-width: 1220px) {
-  .calendar-layout {
-    max-width: 1400px;
-    gap: 60px;
-  }
-
-  .my-calendar-container h1 {
-    font-size: 48px;
-  }
-
-  .weather-widget {
-    width: 350px;
-    height: 350px;
-  }
-
-  .calendar {
-    padding: 20px;
-  }
-
-  .add-event-button button {
-    font-size: 22px;
-    padding: 12px 24px;
-  }
-
-body, html {
-  height: 170%;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-}
-
-}
-
-@media (min-width: 1440px) {
-  .calendar-layout {
-    max-width: 1400px;
-    gap: 60px;
-  }
-
-  .my-calendar-container h1 {
-    font-size: 48px;
-  }
-
-  .weather-widget {
-    width: 350px;
-    height: 350px;
-  }
-
-  .calendar {
-    padding: 20px;
-  }
-
-  .add-event-button button {
-    font-size: 22px;
-    padding: 12px 24px;
-  }
 }
 
 

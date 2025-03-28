@@ -18,6 +18,15 @@ body {
   flex-grow: 1;
 }
 
+.groups-container h1 {
+  color: #ffffff;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 35px;
+  z-index: 10;
+  text-shadow: 2px 2px 5px #473879;
+}
+
 footer {
   background-color: #473879;
   color: white;

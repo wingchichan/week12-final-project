@@ -99,9 +99,9 @@ export default function WeatherWidget() {
           onChange={handleDateChange}
           min={getTodayDate()}
         />
-        <button type="submit">Get Weather</button>
+        <button type="submit">Get Weather!</button>
       </form>
-      {error && <p>{error}</p>}
+      {error && <p className="weather-error">{error}</p>}
       {weather && (
         <div className="weather-info-container">
           <p className="weather-info">

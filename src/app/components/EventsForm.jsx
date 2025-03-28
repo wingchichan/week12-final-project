@@ -36,7 +36,8 @@ const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-container">
+      <div className="form-group">
       <label htmlFor="activity">Activity:</label>
       <input
         type="text"
@@ -46,6 +47,7 @@ const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
         onChange={handleChange}
       />
 
+
       <label htmlFor="location">Location:</label>
       <input
         type="text"
@@ -54,6 +56,7 @@ const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
         value={formData.location}
         onChange={handleChange}
       />
+      
 
       <label htmlFor="eventTime">Event Time:</label>
       <input
@@ -73,8 +76,9 @@ const EventsForm = ({ handleAddEvent, calendarID, userID }) => {
         value={formData.price}
         onChange={handleChange}
       />
+      </div>
 
-      <button type="submit">Create Event</button>
+      <button type="submit" className="form-button">Create Event</button>
     </form>
   );
 };
