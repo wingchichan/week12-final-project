@@ -43,19 +43,21 @@ const MyCalendar = async () => {
   }));
 
   return (
-    <div>
+    <div className="wrapper">
+
       <div className="my-calendar-container">
+        
         <h1>Hello {userName}</h1>
 
         <div className="calendar-layout">
           <div className="left-section">
+          <div className="add-event-button">
+              <Link href="/events">
+                <button>Add New Event 📝</button>
+              </Link>
+            </div>
             <div className="weather-widget">
               <WeatherWidget />
-            </div>
-            <div className="add-event-button">
-              <Link href="/events">
-                <button>Add New Event</button>
-              </Link>
             </div>
           </div>
 

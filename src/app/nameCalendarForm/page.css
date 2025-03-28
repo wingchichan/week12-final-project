@@ -82,10 +82,44 @@ button:hover {
     background-color: #A39AD8;
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-    margin-top: auto;
-    z-index: 501;
-    position: relative; 
+/* Смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+    }
 }
+
+/* Большие экраны (от 1920px) */
+@media (min-width: 1920px) {
+    .page-container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .form-container {
+        max-width: 600px;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input, button {
+        font-size: 18px;
+        padding: 14px;
+    }
+}
+
+ 

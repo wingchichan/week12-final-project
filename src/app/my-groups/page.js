@@ -2,6 +2,7 @@ import { db } from "@/utilities/connect";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import {auth} from "@clerk/nextjs/server"
+import './page.css'
 
 export default async function AllCalendarsPage() {
     const {userId} = await auth() //Gets the clerkID from currenlty logged in user
@@ -22,14 +23,13 @@ export default async function AllCalendarsPage() {
     console.log(calendarData);
     const usersCalendars = calendarData.rows;
 
-
     return (
-        <div>
-        {usersCalendars.map((calendar) => (
-            <div key={calendar.id}>
-            <Link href={`/calendars/${calendar.id}`}>{calendar.name}</Link>
+        <div className="groups-container">
+          {usersCalendars.map((calendar) => (
+            <div key={calendar.id} className="group-item">
+              <Link href={`/calendars/${calendar.id}`}>{calendar.name}</Link>
             </div>
-        ))}
+          ))}
         </div>
-    );
-}
+      );
+    }
