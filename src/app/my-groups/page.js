@@ -26,7 +26,7 @@ export default async function AllCalendarsPage() {
 
     return (
         <div className="groups-container">
-          <h1>Your Friends' Calendars</h1>
+          <h1>Your Friends&apos; Calendars</h1>
           {usersCalendars.map((calendar) => (
             <div key={calendar.id} className="group-item">
               <Link href={`/calendars/${calendar.id}`}>{calendar.name}</Link>
