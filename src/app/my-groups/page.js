@@ -25,12 +25,12 @@ export default async function AllCalendarsPage() {
 
 
     return (
-        <div>
-        {usersCalendars.map((calendar) => (
-            <div key={calendar.id}>
-            <Link href={`/calendars/${calendar.id}`}>{calendar.name}</Link>
+        <div className="groups-container">
+          {usersCalendars.map((calendar) => (
+            <div key={calendar.id} className="group-item">
+              <Link href={`/calendars/${calendar.id}`}>{calendar.name}</Link>
             </div>
-        ))}
+          ))}
         </div>
-    );
-}
+      );
+    }
