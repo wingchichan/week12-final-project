@@ -89,3 +89,38 @@ footer {
     z-index: 501;
     position: relative; 
 }
+
+
+@media screen and (min-width: 1200px) {
+    .form-container {
+        width: 40%;
+        max-width: 600px;
+        margin-top: 320px;
+    }
+
+    input, button {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .form-container {
+        width: 50%;
+    }
+
+    input, button {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input, button {
+        width: 100%;
+    }
+}
+

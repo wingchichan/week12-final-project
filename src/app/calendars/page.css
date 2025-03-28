@@ -128,4 +128,96 @@ body, html {
   background-color: #473879;
 }
 
+@media (max-width: 768px) {
+  .my-calendar-container h1 {
+      font-size: 32px;
+  }
 
+  .calendar-layout {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .weather-widget {
+      width: 90%;
+      max-width: 280px;
+  }
+
+  .calendar {
+      width: 95%;
+      transform: scale(1);
+  }
+
+  .add-event-button button {
+      width: 100%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .calendar-layout {
+      max-width: 1700px;
+  }
+
+  .my-calendar-container h1 {
+      font-size: 55px;
+  }
+
+  .calendar {
+      border: 2px solid #A39AD8;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 1000px;
+      transform: scale(0.7);
+      transform-origin: top center;
+  
+  }
+
+  .calendar-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.1%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+  }
+  
+  .weather-widget {
+    background: linear-gradient(135deg, #A39AD8, #473879);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .add-event-button button {
+    padding: 15px 25px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  .add-event-button button:hover {
+    background-color: #473879;
+  }
+  
+  .my-calendar-container {
+    text-align: center;
+    overflow: auto;
+    padding-bottom: 30px;
+  }
+}

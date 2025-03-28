@@ -19,7 +19,7 @@ export default async function AllCalendarsPage({ searchParams }) {
   return (
     <div className="calendars-container">
       <SearchInput />
-      <div>
+      <div className="no-cal-found">
         {allCalendars.length === 0 ? (
           <p>Oops! No calendars found :(</p> 
         ) : (

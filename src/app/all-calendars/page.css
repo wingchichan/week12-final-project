@@ -9,8 +9,6 @@
   margin-top: 80px;
 }
 
-
-
 .calendars-container::-webkit-scrollbar {
   width: 0px;
   height: 0px;
@@ -61,13 +59,37 @@
 @media (max-width: 600px) {
   .calendar-item {
     font-size: 16px;
-    padding: 12px 24px;
+    padding: 12px 29px;
   }
 }
 
 @media (min-width: 1920px) {
   .calendar-item {
     font-size: 24px;
-    padding: 18px 36px;
+    padding: 16px 70px;
   }
+
+  .navbar-c {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #473879;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #473879;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
 }
