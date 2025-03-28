@@ -1,4 +1,12 @@
-.calendars-container {
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.groups-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6,19 +14,38 @@
   padding: 20px;
   overflow-y: scroll;
   text-align: center;
-  margin-top: 80px;
+  gap: 20px;
+  flex-grow: 1;
 }
 
-.calendars-container::-webkit-scrollbar {
+.groups-container h1 {
+  color: #ffffff;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 35px;
+  z-index: 10;
+  text-shadow: 2px 2px 5px #473879;
+}
+
+footer {
+  background-color: #473879;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; 
+}
+
+.groups-container::-webkit-scrollbar {
   width: 0px;
   height: 0px;
 }
 
-.calendars-container::-webkit-scrollbar-thumb {
+.groups-container::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
-.calendar-item {
+.group-item {
   background-color: #473879;
   color: white;
   padding: 10px 20px;
@@ -33,22 +60,22 @@
   text-align: center;
 }
 
-.calendar-item:hover {
+.group-item:hover {
   background-color: #ffffff;
   color: #473879;
 }
 
-[data-theme="dark"] .calendar-item {
+[data-theme="dark"] .group-item {
   background-color: #ffffff;
   color: #473879;
 }
 
-[data-theme="dark"] .calendar-item:hover {
+[data-theme="dark"] .group-item:hover {
   background-color: #473879;
   color: #ffffff;
 }
 
-.calendar-link:hover {
+.group-link:hover {
   color: #000000;
   background-color: #ffdb88;
   border: 5px solid #473879;
@@ -57,39 +84,15 @@
 }
 
 @media (max-width: 600px) {
-  .calendar-item {
+  .group-item {
     font-size: 16px;
-    padding: 12px 29px;
+    padding: 12px 24px;
   }
 }
 
 @media (min-width: 1920px) {
-  .calendar-item {
+  .group-item {
     font-size: 24px;
-    padding: 16px 70px;
+    padding: 18px 36px;
   }
-
-  .navbar-c {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #473879;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    z-index: 1000;
-  }
-
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #473879;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
 }

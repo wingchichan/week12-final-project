@@ -88,7 +88,6 @@ p {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  
 }
 
 .auth-buttons button:hover {
@@ -137,23 +136,22 @@ p {
 
 .theme-switcher {
   position: absolute;
-  top: 16px;
+  top: 100px;
   right: 230px;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   border: none;
-  font-size: 24px;
   z-index: 1001;
   transition: background-color 0.3s ease;
 }
 
 .theme-switcher.light-theme {
-  background-color: #473879;
+  background-color: #000000;
   color: white;
 }
 
@@ -163,11 +161,7 @@ p {
 }
 
 footer {
-  width: 100%;
-  text-align: center;
-  margin-top: auto;
-  z-index: 501;
-  position: relative; 
+  z-index: 1001;
 }
 
 
@@ -205,23 +199,11 @@ footer {
     opacity: 0.7;
   }
 
-  .logo-home {
-    width: 90px;
-    height: 90px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .user-button {
     width: 60px;
     height: 60px;
     top: 12px;
     right: 8px;
-  }
-
-  footer {
-    padding: 8px 0;
   }
 
   .footer .social-media {
@@ -242,7 +224,7 @@ footer {
   }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 799px) {
   .auth-buttons {
     top: 10px;
     right: 10px;
@@ -257,7 +239,7 @@ footer {
 
   .theme-switcher {
     top: 1.5%;
-    right: 200px;
+    right: 150px;
     width: 35px;
     height: 35px;
     font-size: 20px;
@@ -292,13 +274,10 @@ footer {
     right: 16px;
   }
 
-  footer {
-    padding: 10px 0;
-  }
 
 }
 
-@media (min-width: 800px) and (max-width: 1300px) {
+@media (min-width: 800px) and (max-width: 1399px) {
   .auth-buttons {
     top: 10px;
     right: 10px;
@@ -335,7 +314,7 @@ footer {
 
 @media (min-width: 1400px) {
   .auth-buttons {
-    top: 40px;
+    top: 10px;
     right: 40px;
     flex-direction: row;
     gap: 25px;
@@ -347,8 +326,10 @@ footer {
   }
 
   .theme-switcher {
-    top: 5%;
-    right: 320px;
+    top: 1.5%;
+    right: 330px;
+    width: 35px;
+    height: 35px;
     z-index: 1001;
   }
 
@@ -371,9 +352,9 @@ footer {
   }
 
   .user-button {
-    width: 100px;
-    height: 100px;
-    top: 50px;
+    width: 130px;
+    height: 130px;
+    top: 1.5%;
     right: 32px;
   }
 }

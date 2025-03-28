@@ -1,7 +1,9 @@
+
 import { db } from "@/utilities/connect";
 import { auth } from "@clerk/nextjs/server";
 import MyCalendar from "@/app/components/Calendar";
 import { revalidatePath } from "next/cache";
+import "./page.css"
 
 export default async function UserCalendar({ params }) {
     const { id } = await params; // Get the calendar ID from params
@@ -59,15 +61,17 @@ export default async function UserCalendar({ params }) {
     // If the user is not a member, show the join form
     if (members.rows.length === 0) {
         return (
-            <div>
-                <p>You are not part of this group.</p>
-                <form action={handleJoinGroup}>
-                    <button type="submit">Join Group</button>
-                </form>
-            </div>
+          <div className="center-wrapper">
+          <div className="not-in-group-container">
+            <p>You are not part of this group.</p>
+            <form action={handleJoinGroup}>
+              <button type="submit">Join Group</button>
+            </form>
+          </div>
+          </div>
         );
-    }
-
+      }
+      
     return (
         <div>
             <h2>{individualCalendar.name}</h2>
