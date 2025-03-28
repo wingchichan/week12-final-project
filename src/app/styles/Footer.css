@@ -9,7 +9,7 @@
   font-weight: bold;
   border-top: 2px solid #473879;
   position: relative;
-  margin-top: auto;
+  margin-top: auto !important;
 }
 
   .footer-text {

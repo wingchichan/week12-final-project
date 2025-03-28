@@ -1,13 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .groups-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  max-height: 80vh;
   overflow-y: scroll;
   text-align: center;
   gap: 20px;
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #473879;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; 
 }
 
 .groups-container::-webkit-scrollbar {

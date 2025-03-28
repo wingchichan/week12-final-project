@@ -1,7 +1,9 @@
+
 import { db } from "@/utilities/connect";
 import { auth } from "@clerk/nextjs/server";
 import MyCalendar from "@/app/components/Calendar";
 import { revalidatePath } from "next/cache";
+import "./page.css"
 
 export default async function UserCalendar({ params }) {
     const { id } = await params; // Get the calendar ID from params
